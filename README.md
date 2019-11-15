@@ -1,24 +1,28 @@
-# README
+# Docker on rails6
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## まずはじめに
 
-Things you may want to cover:
+* Dockerfile
+* docker-compose.yml
+* Gemfile
+* Gemfile.lock
+* entrypoint.sh
 
-* Ruby version
+を作る
 
-* System dependencies
+## railsアプリ作成
 
-* Configuration
+```$ docker-compose run web rails new . --force --no-deps --database=mysql --skip-test --webpacker```
 
-* Database creation
+## イメージのビルド
 
-* Database initialization
+```$ docker-compose build```
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## config/database.ymlを書き換える
 
-* Deployment instructions
+## dbの作成
+```$ docker-compose run web rake db:create```
 
-* ...
+## コンテナ起動
+```$ docker-compose up```
