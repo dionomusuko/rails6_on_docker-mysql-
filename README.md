@@ -1,5 +1,10 @@
 # Docker on rails6
 
+## 環境
+* ruby 2.6
+* rails 6.0.0
+* Mysql 8.0
+
 ## まずはじめに
 
 * Dockerfile
